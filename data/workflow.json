@@ -1,0 +1,256 @@
+[
+  {
+    "key": "companyBasicInfo",
+    "title": "Company Information",
+    "group": [
+      {
+        "key": "companyName",
+        "title": "Company Name",
+        "type": "text"
+      },
+      {
+        "key": "companyAddress",
+        "title": "Address",
+        "group": [
+          {
+            "key": "streetLine1",
+            "title": "Street Line 1",
+            "type": "text"
+          },
+          {
+            "key": "streetLine2",
+            "title": "Street Line 2",
+            "type": "text"
+          },
+          {
+            "key": "city",
+            "title": "City",
+            "type": "text"
+          },
+          {
+            "key": "state",
+            "title": "State",
+            "type": "text"
+          },
+          {
+            "key": "country",
+            "title": "Country",
+            "type": "text"
+          },
+          {
+            "key": "zipCode",
+            "title": "Zip Code",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "key": "companyContactInfo",
+        "title": "Contact Info Fields",
+        "group": [
+          {
+            "key": "companyPhone",
+            "title": "Phone",
+            "type": "text"
+          },
+          {
+            "key": "companyEmail",
+            "title": "Email",
+            "type": "text"
+          },
+          {
+            "key": "companyWebsite",
+            "title": "Website",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "key": "companyGeneralInfo",
+        "title": "Company General Info Fields",
+        "group": [
+          {
+            "key": "companyLogo",
+            "title": "Logo",
+            "type": "text"
+          },
+          {
+            "key": "companyDescription",
+            "title": "Description",
+            "type": "text"
+          },
+          {
+            "key": "companyType",
+            "title": "Type",
+            "type": "text"
+          },
+          {
+            "key": "companyStatus",
+            "title": "Status",
+            "type": "text"
+          },
+          {
+            "key": "companyRegistrationDate",
+            "title": "Registration Date",
+            "type": "date"
+          },
+          {
+            "key": "companyRegistrationCountry",
+            "title": "Registration Country",
+            "type": "text"
+          },
+          {
+            "key": "companyRegistrationNumber",
+            "title": "Registration Number",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "key": "companySocialMedia",
+        "title": "Company Social Media Fields",
+        "group": [
+          {
+            "key": "companyFacebook",
+            "title": "Facebook",
+            "type": "text"
+          },
+          {
+            "key": "companyTwitter",
+            "title": "Twitter",
+            "type": "text"
+          },
+          {
+            "key": "companyLinkedin",
+            "title": "Linkedin",
+            "type": "text"
+          },
+          {
+            "key": "companyGooglePlus",
+            "title": "Google Plus",
+            "type": "text"
+          },
+          {
+            "key": "companyYoutube",
+            "title": "Youtube",
+            "type": "text"
+          },
+          {
+            "key": "companyInstagram",
+            "title": "Instagram",
+            "type": "text"
+          },
+          {
+            "key": "companyPinterest",
+            "title": "Pinterest",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "userBasicInfo",
+    "title": "User Information",
+    "group": [
+      {
+        "key": "userFirstName",
+        "title": "First Name",
+        "type": "text"
+      },
+      {
+        "key": "userLastName",
+        "title": "Last Name",
+        "type": "text"
+      },
+      {
+        "key": "userAddress",
+        "title": "Address",
+        "group": [
+          {
+            "key": "streetLine1",
+            "title": "Street Line 1",
+            "type": "text"
+          },
+          {
+            "key": "streetLine2",
+            "title": "Street Line 2",
+            "type": "text"
+          },
+          {
+            "key": "city",
+            "title": "City",
+            "type": "text"
+          },
+          {
+            "key": "state",
+            "title": "State",
+            "type": "text"
+          },
+          {
+            "key": "country",
+            "title": "Country",
+            "type": "text"
+          },
+          {
+            "key": "zipCode",
+            "title": "Zip Code",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "key": "userContactInfo",
+        "title": "Contact Info Fields",
+        "group": [
+          {
+            "key": "userPhone",
+            "title": "Phone",
+            "type": "text"
+          },
+          {
+            "key": "userEmail",
+            "title": "Email",
+            "type": "text"
+          },
+          {
+            "key": "userWebsite",
+            "title": "Website",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "key": "userGeneralInfo",
+        "title": "User General Info Fields",
+        "group": [
+          {
+            "key": "userPhoto",
+            "title": "Photo",
+            "type": "text"
+          },
+          {
+            "key": "userDescription",
+            "title": "Description",
+            "type": "text"
+          },
+          {
+            "key": "userType",
+            "title": "Type",
+            "type": "text"
+          },
+          {
+            "key": "userStatus",
+            "title": "Status",
+            "type": "text"
+          },
+          {
+            "key": "userRegistrationDate",
+            "title": "Registration Date",
+            "type": "date"
+          }
+        ]
+      }
+    ]
+  }
+]
