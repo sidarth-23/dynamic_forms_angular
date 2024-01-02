@@ -6,7 +6,21 @@
       {
         "key": "companyName",
         "title": "Company Name",
-        "type": "text"
+        "type": "select",
+        "options": [
+          {
+            "value": "company1",
+            "label": "Company 1"
+          },
+          {
+            "value": "company2",
+            "label": "Company 2"
+          },
+          {
+            "value": "company3",
+            "label": "Company 3"
+          }
+        ]
       },
       {
         "key": "companyAddress",

@@ -15,6 +15,10 @@ import data from '../../data/workflow.json';
 import { GroupItem } from '../shared/interface/data-json';
 import { MatStepperModule } from '@angular/material/stepper';
 import { FormControlPipe } from './shared/pipes/form-control.pipe';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @Component({
@@ -32,7 +36,12 @@ import { FormControlPipe } from './shared/pipes/form-control.pipe';
     MatFormFieldModule,
     MatInputModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule
   ],
   templateUrl: './app.component.html',
   styles: [],

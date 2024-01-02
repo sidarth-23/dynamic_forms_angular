@@ -39,50 +39,72 @@
 </mat-stepper>
 
 <ng-template #generateForm let-filterFields let-formGroup="formGroup">
-  <div *ngFor="let item of filterFields">
-    <ng-container
-      *ngIf="!item.group; else nestedGroup"
-      class="flex flex-col space-y-8"
-    >
-      <mat-form-field class="w-full">
-        <mat-label>
+  @for (item of filterFields; track $index) { @if (item.group) {
+  <div class="mb-4">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           {{ item.title }}
-        </mat-label>
-        <input
-          matInput
-          [type]="item.type"
-          [formControl]="formGroup.get(item.key)"
-          [placeholder]="item.title"
-          [name]="item.key"
-          class=""
-        />
-      </mat-form-field>
-    </ng-container>
-    <ng-template #nestedGroup>
-      <div class="mb-4">
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{ item.title }}
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="row pb-4">
-            <div [formGroup]="formGroup.get(item.key)">
-              <ng-container
-                *ngTemplateOutlet="
-                  generateForm;
-                  context: {
-                    $implicit: item.group,
-                    formGroup: formGroup.get(item.key)
-                  }
-                "
-              >
-              </ng-container>
-            </div>
-          </div>
-        </mat-expansion-panel>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="row pb-4">
+        <div [formGroup]="formGroup.get(item.key)">
+          <ng-container
+            *ngTemplateOutlet="
+              generateForm;
+              context: {
+                $implicit: item.group,
+                formGroup: formGroup.get(item.key)
+              }
+            "
+          >
+          </ng-container>
+        </div>
       </div>
-    </ng-template>
+    </mat-expansion-panel>
   </div>
+  } @else if (item.type === 'text') {
+  <mat-form-field class="w-full">
+    <mat-label>
+      {{ item.title }}
+    </mat-label>
+    <input
+      matInput
+      [type]="item.type"
+      [formControl]="formGroup.get(item.key)"
+      [placeholder]="item.title"
+      [name]="item.key"
+    />
+  </mat-form-field>
+  } @else if (item.type === 'date') {
+  <mat-form-field class="w-full">
+    <mat-label>
+      {{ item.title }}
+    </mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [formControl]="formGroup.get(item.key)"
+    />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  } @else if (item.type === 'select') {
+    <p>
+      {{item.type}}
+    </p>
+    <mat-form-field class="w-full">
+      <mat-label>
+        {{item.title}}
+      </mat-label>
+      <mat-select>
+        @for (option of item.options; track option) {
+          <mat-option [value]="option.value">{{option.label}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  }
+ }
 </ng-template>
 <!-- <pre>{{ userForm.value | json }}</pre> -->
